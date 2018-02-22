@@ -17,7 +17,7 @@ Part of DCC++ BASE STATION for the Arduino
 
 #ifdef ARDUINO_AVR_UNO                        // Configuration for UNO
   #define  CURRENT_SAMPLE_TIME        10
-#else                                         // Configuration for MEGA    
+#else                                         // Configuration for MEGA
   #define  CURRENT_SAMPLE_TIME        1
 #endif
 
@@ -25,11 +25,10 @@ struct CurrentMonitor{
   static long int sampleTime;
   int pin;
   float current;
-  char *msg;
-  CurrentMonitor(int, char *);
+  const char *msg;
+  CurrentMonitor(int, const char *);
   static boolean checkTime();
   void check();
 };
 
 #endif
-
