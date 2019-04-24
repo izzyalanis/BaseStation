@@ -130,7 +130,7 @@ void RegisterList::setThrottle(char *s) volatile{
   INTERFACE.print(nReg); INTERFACE.print(" ");
   INTERFACE.print(tSpeed); INTERFACE.print(" ");
   INTERFACE.print(tDirection);
-  INTERFACE.print(">");
+  INTERFACE.print(">\n");
   
   speedTable[nReg]=tDirection==1?tSpeed:-tSpeed;
     
